@@ -73,14 +73,13 @@ ClassMethod Download(filename As %String)
 		// 取得範囲(Rangeヘッダ)を取得（単一のみ）
 		set range=%request.GetCgiEnv("HTTP_RANGE")
 		if range'="" {
-			set rangeType=$piece(range,"="),range=$piece(range,"=",2)
+			set unit=$piece(range,"="),range=$piece(range,"=",2)
 
 			// 複数範囲取得は無視する
 			set range=$zstrip($piece(range,","),"<>W")
 		} else {
 			set range="0-"
 		}
-		set ^header($I(^header))=$job_"]range:"_range
 		if range="0-" {
 			// 範囲が指定されていない場合
 
