@@ -3,7 +3,7 @@ Class REST.StreamTransfer Extends %CSP.REST
 {
 
 /// ファイル格納ディレクトリ
-Parameter Storage = "c:\temp";
+Parameter Storage = "c:\tempdata";
 
 XData UrlMap [ XMLNamespace = "http://www.intersystems.com/urlmap" ]
 {
